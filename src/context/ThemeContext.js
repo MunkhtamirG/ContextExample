@@ -8,13 +8,13 @@ export function useTheme() {
 
 export default function ThemeProvider(props) {
   const [theme, setTheme] = useState();
-  // useEffect(() => {
-  //   if (!localStorage.getItem("theme")) {
-  //     localStorage.setItem("theme", "dark");
-  //   } else {
-  //     setTheme(localStorage.getItem("theme"));
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (!localStorage.getItem("theme")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      setTheme(localStorage.getItem("theme"));
+    }
+  }, []);
   return (
     <ThemeContext.Provider value={[theme, setTheme]}>
       {props.children}

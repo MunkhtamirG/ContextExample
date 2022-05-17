@@ -5,11 +5,11 @@ function Home() {
 
   const setDark = () => {
     setTheme("DARK");
-    // localStorage.setItem("theme", "dark");
+    localStorage.setItem("theme", "dark");
   };
   const setWhite = () => {
     setTheme("WHITE");
-    // localStorage.setItem("theme", "white");
+    localStorage.setItem("theme", "white");
   };
   return (
     <div className="App">
